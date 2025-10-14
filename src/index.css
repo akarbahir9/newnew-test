@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Load local NRT fonts from the built assets folder. Use relative paths so
+   Vite rewrites them correctly during build. */
 @font-face {
   font-family: 'NRT';
-  src: url('/src/assets/fonts/NRT-Bd.woff') format('woff');
-  font-weight: bold;
+  src: url('./assets/NRT-Reg-TxdlFpJy.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'NRT';
-  src: url('/src/assets/fonts/NRT-Reg.ttf') format('truetype');
-  font-weight: 400;
+  src: url('./assets/NRT-Bd-RKCUUwpX.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+/* Use NRT as the default font for the whole document. Tailwind's
+   `font-sans` is already mapped to 'NRT' in `tailwind.config.js`, but
+   setting it on html/body ensures non-Tailwind elements also inherit it. */
+html, body {
+  font-family: 'NRT', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
 body {
