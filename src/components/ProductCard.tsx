@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       <div className="relative">
         <img 
-          src={product.image_url || 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x400/6366f1/white?text=Sticker'} 
+          src={product.image_url || 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x400/6366f1/white?text=Sticker'} 
           alt={product.name} 
           className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
         />
