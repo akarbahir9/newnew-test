@@ -24,11 +24,9 @@ html, body {
   font-family: 'NRT', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
-/* Ensure all elements inherit the font (covers components and Tailwind utilities).
-   Use !important because some components may set font-family explicitly. */
-*, *::before, *::after {
-  font-family: 'NRT', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
-}
+/* Elements inherit font from html/body. Avoid using global !important to
+  allow deliberate component-level overrides. */
+
 
 body {
   @apply bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300;
