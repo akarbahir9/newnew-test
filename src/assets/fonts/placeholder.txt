@@ -1,0 +1,2 @@
+Please upload your font files (e.g., .woff, .woff2) into this directory.
+Then, update the @font-face rule in `src/index.css` and the font family name in `tailwind.config.js`.
