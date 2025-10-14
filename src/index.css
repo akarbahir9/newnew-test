@@ -10,6 +10,26 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'NRT';
+  src: url('./assets/fonts/NRT-Reg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Make NRT the global font for every text element. This intentionally applies
+   to all elements so the project's text uses the NRT family everywhere. */
+html, body {
+  font-family: 'NRT', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Ensure all elements inherit the font (covers components and Tailwind utilities).
+   Use !important because some components may set font-family explicitly. */
+*, *::before, *::after {
+  font-family: 'NRT', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
+}
+
 body {
-    @apply bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300 font-sans;
+  @apply bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300;
 }
